@@ -10,8 +10,6 @@ public class Map {
 	// function to the elements of this stream.
 
 	// Map() using for manupulation of collection objects.
-	
-	//https://javaconceptoftheday.com/java-8-streams-beginners-guide/
 
 	public static void main(String[] args) {
 		List<String> names = Stream.of("Pritama", "Sritam", "Micky", "Lucky").map(name -> {
