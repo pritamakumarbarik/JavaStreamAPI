@@ -2,6 +2,7 @@ package com.stream.api;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -28,9 +29,9 @@ public class StreamAPI {
 		e3.setRole("User");
 
 		List<Employee> user = new ArrayList<>(Arrays.asList(e1, e2, e3));
-
 		Map<String, Long> roleOccurence = user.stream()
-				.collect(Collectors.groupingBy(x -> x.getRole(), Collectors.counting()));
+				.collect(Collectors.groupingBy((x) -> x.getRole(), Collectors.counting()));
+
 		System.err.println(roleOccurence);
 		System.out.print("Count occurance of role List of user?");
 
