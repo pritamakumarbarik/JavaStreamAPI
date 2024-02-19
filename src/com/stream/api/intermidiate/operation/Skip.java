@@ -3,19 +3,13 @@ package com.stream.api.intermidiate.operation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Limit {
-
+public class Skip {
 	/*
-	 * What is limit()? i)Returns a stream containing first n elements. ii)It is a
-	 * Intermediate Operation.
+	 * What is skip() in stream API ?
+	 *  i)It is intermediate Operation.
+	 *  ii)Returns a stream after skipping first n elements..
 	 */
-
 	public static void main(String[] args) {
-
-		/*
-		 * What is limit() in stream API ? i)It is intermediate Operation. ii) Returns a
-		 * stream containing first n elements.
-		 */
 		List<String> names = new ArrayList<>();
 		names.add("pritam");
 		names.add("sritam");
@@ -23,12 +17,13 @@ public class Limit {
 		names.add("julia");
 		names.add("david");
 		names.add("bunny");
-		// Selecting first 2 names
-		names.stream().limit(2).map(name -> {
+		// skip first 2 names
+		names.stream().skip(2).map(name -> {
 			if (name.contains("m")) {
 				name += "z";
 			}
 			return name;
 		}).forEach(System.out::println);
 	}
+
 }

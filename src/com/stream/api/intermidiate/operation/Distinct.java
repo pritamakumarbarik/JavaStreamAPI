@@ -8,8 +8,7 @@ public class Distinct {
 	/*
 	 * What is distinct in Stream Api ?
 	 * 
-	 * i) Distinct is a intermediate operation. 
-	 * ii)Returns Stream of unique element.
+	 * i) Distinct is a intermediate operation. ii)Returns Stream of unique element.
 	 */
 	public static void main(String[] args) {
 
